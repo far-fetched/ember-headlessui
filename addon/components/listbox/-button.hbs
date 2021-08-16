@@ -1,0 +1,12 @@
+<button
+  role='button'
+  id='{{@guid}}-button'
+  aria-haspopup='listbox'
+  aria-controls={{@guid}}
+  {{on 'click' @toggleState}}
+  {{aria "expanded" value=@isOpen removeWhen=@disabled}}
+  disabled={{@disabled}}
+  ...attributes
+>
+  {{yield}}
+</button>

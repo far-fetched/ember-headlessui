@@ -1,0 +1,14 @@
+{{yield
+  (hash
+    open=this.isOpen
+    Options=(component 'listbox/-options' isOpen=this.isOpen guid=this.guid)
+    Button=(component
+      'listbox/-button'
+      guid=this.guid
+      isOpen=this.isOpen
+      toggleState=(fn (set this 'isOpen' (not this.isOpen)))
+      disabled=@disabled
+    )
+    Label=(component 'listbox/-label' isOpen=this.isOpen disabled=@disabled)
+  )
+}}

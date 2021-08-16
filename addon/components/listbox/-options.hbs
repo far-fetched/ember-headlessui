@@ -1,0 +1,5 @@
+{{#if @isOpen}}
+  <ul role='listbox' aria-labelledby='{{@guid}}-button'>
+    {{yield (hash Option=(component 'listbox/-option'))}}
+  </ul>
+{{/if}}
